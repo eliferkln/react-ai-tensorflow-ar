@@ -1,7 +1,12 @@
 import "./App.css";
+import Container from "./components/container/Container";
 
 function App() {
-  return <div className="App">app</div>;
+  return (
+    <>
+      <Container />
+    </>
+  );
 }
 
 export default App;

@@ -1,0 +1,77 @@
+{
+  "modelsglasses": [
+    {
+      "name": "Green Cube",
+      "glbFile": "/assets/glasses/1.glb"
+    },
+
+    {
+      "name": "Silver Cube",
+      "glbFile": "/assets/glasses/2.glb"
+    },
+    {
+      "name": "Red Cube",
+      "glbFile": "/assets/glasses/3.glb"
+    }
+  ],
+  "modelsshoe": [
+    {
+      "name": "Green Cube",
+      "glbFile": "/assets/shoe/1.glb"
+    },
+
+    {
+      "name": "Silver Cube",
+      "glbFile": "/assets/shoe/2.glb"
+    },
+    {
+      "name": "Red Cube",
+      "glbFile": "/assets/shoe/3.glb"
+    }
+  ],
+  "modelsglass": [
+    {
+      "name": "Green Cube",
+      "glbFile": "/assets/glass/1.glb"
+    },
+
+    {
+      "name": "Silver Cube",
+      "glbFile": "/assets/glass/2.glb"
+    },
+    {
+      "name": "Red Cube",
+      "glbFile": "/assets/glass/3.glb"
+    }
+  ],
+  "modelskeyboard": [
+    {
+      "name": "Green Cube",
+      "glbFile": "/assets/keyboard/1.glb"
+    },
+
+    {
+      "name": "Silver Cube",
+      "glbFile": "/assets/keyboard/2.glb"
+    },
+    {
+      "name": "Red Cube",
+      "glbFile": "/assets/keyboard/3.glb"
+    }
+  ],
+  "modelspencil": [
+    {
+      "name": "Green Cube",
+      "glbFile": "/assets/pencil/1.glb"
+    },
+
+    {
+      "name": "Silver Cube",
+      "glbFile": "/assets/pencil/2.glb"
+    },
+    {
+      "name": "Red Cube",
+      "glbFile": "/assets/pencil/3.glb"
+    }
+  ]
+}
