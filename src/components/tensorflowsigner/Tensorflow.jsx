@@ -39,7 +39,7 @@ function Tensorflow({ setModelName, modelName }) {
   useEffect(() => {
     if (modelType[0]?.probability.toFixed(2) >= 0.9) {
       setModelName(modelType[0]?.className);
-    } else if (modelType[1]?.probability.toFixed(2) >= 0.9) {
+    } else if (modelType[1]?.probability.toFixed(2) >= 0.5) {
       setModelName(modelType[1]?.className);
     } else if (modelType[2]?.probability.toFixed(2) >= 0.9) {
       setModelName(modelType[2]?.className);

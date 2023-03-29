@@ -35,31 +35,30 @@ const Model = ({ modelName }) => {
   const [modelx, setModelx] = useState<string>("");
   const [newName, setNewName] = useState<any>([]);
 
-  const test = (mdname: string) => {
+  const test = () => {
     data?.map((item: any) => {
-      setModelx(item[0]);
-      console.log("itemm", item[1]);
-      item.find((model: any) => {
-        console.log("modelz", model);
-        const modelNameContoller = mdname === model;
-        console.log("denemeee", modelNameContoller);
-        if (modelNameContoller === true) {
-          setNewName(item[1]);
-          console.log("itemneww", newName);
-        }
-        return modelNameContoller;
-      });
+      if (modelName === item[0]) {
+        setNewName(item[1]);
+      }
+      console.log("itemm", item[0]);
+      // item.find((model: any) => {
+      //   const modelNameContoller = mdname === model;
+      //   console.log("denemeee", modelNameContoller);
+      //   if (modelNameContoller === true) {
+      //     console.log("itemneww", newName);
+      //   }
+      //   return modelNameContoller;
+      // });
 
       return item;
     });
   };
 
   useEffect(() => {
-    if (modelx === modelName) {
-      console.log("son", modelName === modelx);
-      test(modelName);
+    if (modelName) {
+      test();
     }
-  }, [newName, modelName, modelx]);
+  }, [newName, modelName]);
 
   return (
     <>
