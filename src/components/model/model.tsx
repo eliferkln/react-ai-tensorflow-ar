@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "@google/model-viewer/lib/model-viewer";
+import ModelData from "../../data.json";
 
 declare global {
   namespace JSX {
@@ -29,25 +30,43 @@ interface ModelViewerJSX {
   sx?: any;
 }
 
-const Model = () => {
-  const [data, setdata] = useState<any>([]);
+const Model = ({ modelName }) => {
+  const [data, setdata] = useState<any>(Object.entries(ModelData));
+  const [modelx, setModelx] = useState<string>("");
+  const [newName, setNewName] = useState<any>([]);
+
+  const test = (mdname: string) => {
+    data?.map((item: any) => {
+      setModelx(item[0]);
+      console.log("itemm", item[1]);
+      item.find((model: any) => {
+        console.log("modelz", model);
+        const modelNameContoller = mdname === model;
+        console.log("denemeee", modelNameContoller);
+        if (modelNameContoller === true) {
+          setNewName(item[1]);
+          console.log("itemneww", newName);
+        }
+        return modelNameContoller;
+      });
+
+      return item;
+    });
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/data.json");
-      const json = await res.json();
-      console.log("jsondata", json?.modelsglasses[0].glbFile);
-      setdata(json?.modelsglasses);
-    };
-    fetchData();
-  }, []);
-  console.log("dataaa", data);
+    if (modelx === modelName) {
+      console.log("son", modelName === modelx);
+      test(modelName);
+    }
+  }, [newName, modelName, modelx]);
+
   return (
     <>
-      {data?.map((item: any) => (
+      {newName?.map((item: any) => (
         <model-viewer
           id="first"
-          src={item?.glbFile}
+          src={item.glbFile}
           // ios-src={iosSrc}
           seamless-poster
           environment-image="neutral"
